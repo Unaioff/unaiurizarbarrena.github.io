@@ -1,0 +1,470 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background: #454B58;
+    min-height: 180vh;
+}
+
+.Background {
+    width: 90%;
+    min-height: 100vh;
+    background: #E4E6E7;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    box-shadow: -5px 0 55px #1d2025, 5px 0 25px #1d2025; 
+    min-height: 180vh;
+    overflow: hidden;
+}
+
+@media (min-width: 601px) {
+
+
+.NavBar {
+    padding-top: 5vh;
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    justify-content: center;
+    gap: 3vh;
+}
+
+.NavBar > li > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 2.2vh; 
+}
+
+.NavBar > li:nth-child(1) > a {
+    font-size: 3vh;
+    text-decoration: underline;
+}
+
+.NavBar > li {
+    list-style-type: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+
+}
+
+.NavBar > li:hover {
+    box-shadow: 0 12px 5px rgba(0, 0, 0, 0.22);
+    transform: translateY(-4px);
+}
+
+
+.SubMenu {
+    position: absolute;
+    left: -25%;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    min-width: 200px;
+    padding: 10px 0;
+    background-color: #ffffff;
+    border-radius: 15px;
+    z-index: 10;
+    visibility: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.SubMenu > li {
+    list-style: none;
+}
+
+.SubMenu > li > a {
+    padding: 8px 15px;
+    color: black;
+    text-decoration: none;
+    display: flex;
+}
+
+.SubMenu > li > a:hover {
+    background-color: #f3f3f3;
+}
+
+.NavBar > li:hover .SubMenu {
+    visibility: visible;
+}
+
+.Title {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Title > h1{
+    font-size: 10vh;         
+}
+
+.Title > b{
+    font-size: 3vh;
+}
+
+.Main{ 
+    margin-top: 2vh;
+    display: flex;  
+    align-items: center; 
+    width: 90%;
+    height: 98vh; 
+    gap: 30px;
+}
+
+
+.MainImage {
+
+    display: flex;
+    width: 50vh;
+    min-width: 20vh;
+    background: #ddd;
+
+    margin-right: 10vh;
+    margin-left: auto;
+
+    transform: rotateZ(-5deg);
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.4);
+    border-radius: 15px;    
+    transition: 0.5s ease;
+
+    overflow: hidden;
+    border-radius: 10px;
+    aspect-ratio: 9/12;
+    
+    
+    
+}
+
+
+.MainImage > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.MainImage:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px #00000038;
+}
+
+.Image2,
+.Image3,
+.Image4,
+.Image5,
+.Image6 {
+    position: absolute;
+    height: 35vh;
+    width: 25vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Image2 { top: 1000px; left: 5%; }
+.Image3 { top: 2000px; right: 5%; }
+.Image4 { top: 3000px; left: 5%; }
+.Image5 { top: 4000px; right: 5%; }
+.Image6 { top: 5000px; left: 5%; }
+
+.Buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 2vh;
+}
+
+.Buttons > a > button {
+    width: 5vh;
+    height: 5vh;
+    border: none;
+    border-radius: 100%;
+    background: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.Buttons a button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 5px;
+}
+
+.Buttons > a > button:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+}
+
+
+.TextoProyectos{
+    margin-top: 5vh;
+    text-align: center;
+    width: 60%;
+    font-style: italic;
+}
+
+
+
+
+
+.SliderWindow {
+    width: 100%;
+    margin-top: 10vh;
+}
+
+
+.Slider{
+    display: flex;
+    width: max-content;
+    gap: 5vw;
+    animation: SliderMovement 15s linear infinite;
+}
+
+.Slide{
+    width: 30vw;            
+    aspect-ratio: 16 / 9;    
+}
+
+.Slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Slide img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 30px 35px rgba(0, 0, 0, 0.22);
+}
+
+@keyframes SliderMovement {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50.95%);
+    }
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+
+    background: #454B58;
+}
+
+.Background {
+    width: 100%;
+    background: #E4E6E7;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: none;
+
+}
+
+
+nav {
+    width: 100%;
+}
+
+
+.NavBar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.NavBar li a {
+    width: 100%;
+    padding: 18px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    background-color: #454B58;
+    font-style: none;
+}
+
+
+
+.NavBar li{
+    list-style: none;
+    
+}
+
+.NavBar > li:nth-child(1) > a {
+    text-decoration: underline;
+    font-size: large;
+}
+
+
+
+
+.Title {
+    margin-top: 4vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.Title > h1 {
+    font-size: 5vh;
+}
+
+.Title > b {
+    font-size: 2.5vh;
+}
+
+.Main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    margin-top: 4vh;
+}
+
+.MainImage {
+
+    height: 35vh;
+    width: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 2vh;
+    flex-wrap: wrap;          
+    justify-content: center;  
+    
+}
+
+.Buttons > a > button {
+    width: 5vh;
+    height: 5vh;
+    border: none;
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 0;
+}
+
+.Buttons a button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+
+.MainImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+
+.TextoProyectos{
+    margin-top: 5vh;
+    text-align: center;
+    width: 60%;
+    font-style: italic;
+    margin-bottom: -15vh;
+}
+
+
+
+
+.SliderWindow {
+    width: 100%;
+    margin-top: 20vh;
+}
+
+
+.Slider{
+    display: flex;
+    width: max-content;
+    gap: 5vw;
+    animation: SliderMovement 15s linear infinite;
+}
+
+.Slide{
+    width: 30vw;            
+    aspect-ratio: 16 / 9;    
+}
+
+.Slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Slide img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 30px 35px rgba(0, 0, 0, 0.22);
+}
+
+@keyframes SliderMovement {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50.95%);
+    }
+}
+
+}

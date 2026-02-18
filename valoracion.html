@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="Css/valoracion.css">
+    <title>Valoracion - U.U</title>
+</head>
+<body>
+
+<div class="Background">
+    
+    <nav>
+    <ul class="NavBar">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="experiencias.html">Experiencias</a>
+        <ul class="SubMenu">
+            <li><a href="experiencias.html#Asti25">Astii Robotic Challenge</a></li>
+            <li><a href="experiencias.html#Cansat">Cansat Es</a></li>
+        </ul>
+        </li>
+        <li><a href="sobremi.html">Sobre mi</a></li>
+        <li><a href="contacto.html">Contacto</a>
+        <ul class="SubMenu">
+            <li><a href="valoracion.html">Valoración</a></li>
+        </ul>
+        </li>
+    </ul>
+    </nav>
+    
+
+<form action="#" method="post">
+
+    <h2>Opinión sobre la página</h2>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text"  name="nombre" placeholder="Tu nombre" >
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email"  name="email" placeholder="Tu email">
+
+    <label for="satisfaccion">¿Cómo calificarías la página?</label>
+    <select name="satisfaccion">
+        <option value="" disabled selected>Selecciona una opción</option>
+        <option value="excelente">Excelente</option>
+        <option value="buena">Buena</option>
+        <option value="regular">Regular</option>
+        <option value="mala">Mala</option>
+    </select>
+
+    <label for="comentario">Comentarios:</label>
+    <textarea  name="comentario" placeholder="Escribe tu opinión..."></textarea>
+
+    <label>¿Qué te gustó de la página?</label>
+    <label><input type="checkbox" name="gustos" value="diseño"> Diseño</label>
+    <label><input type="checkbox" name="gustos" value="contenido"> Contenido</label>
+    <label><input type="checkbox" name="gustos" value="rapidez"> Rapidez</label>
+
+    <label>¿Recomendarías la página?</label>
+    <label><input type="radio" name="recomienda" value="si" required> Sí</label>
+    <label><input type="radio" name="recomienda" value="no"> No</label>
+    <label><input type="radio" name="recomienda" value="talvez"> Tal vez</label>
+
+    <div style="display: flex; justify-content: space-between; gap: 10px;">
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+    </div>
+
+</form>
+
+
+
+
+
+</div>
+
+</html>

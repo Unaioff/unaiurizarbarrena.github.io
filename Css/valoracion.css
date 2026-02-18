@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background: #454B58;
+    min-height: 180vh;
+}
+
+.Background {
+    width: 90%;
+    min-height: 100vh;
+    background: #E4E6E7;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    box-shadow: -5px 0 55px #1d2025, 5px 0 25px #1d2025; 
+    min-height: 180vh;
+    overflow: hidden;
+}
+
+@media (min-width: 601px) {
+
+
+.NavBar {
+    padding-top: 5vh;
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    justify-content: center;
+    gap: 3vh;
+}
+
+.NavBar > li > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 2.2vh; 
+}
+
+.NavBar > li:nth-child(5) > a {
+    font-size: 3vh;
+    text-decoration: underline;
+}
+
+.NavBar > li {
+    list-style-type: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+
+}
+
+.NavBar > li:hover {
+    box-shadow: 0 12px 5px rgba(0, 0, 0, 0.22);
+    transform: translateY(-4px);
+}
+
+
+.SubMenu {
+    position: absolute;
+    left: -25%;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    min-width: 200px;
+    padding: 10px 0;
+    background-color: #ffffff;
+    border-radius: 15px;
+    z-index: 10;
+    visibility: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.SubMenu > li {
+    list-style: none;
+}
+
+.SubMenu > li > a {
+    padding: 8px 15px;
+    color: black;
+    text-decoration: none;
+    display: flex;
+}
+
+.SubMenu > li > a:hover {
+    background-color: #f3f3f3;
+}
+
+.NavBar > li:hover .SubMenu {
+    visibility: visible;
+}
+
+
+
+
+
+
+
+form {
+    width: 90%;
+    max-width: 500px;
+    margin: 10vh auto;
+    padding: 50px;
+    background-color: #444851;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: white;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+form label {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+form input[type="radio"] {
+    margin-right: 8px;
+}
+
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+form textarea:focus {
+    outline: 2px solid #ffffff;
+}
+
+form button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    color: #454B58;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+form button:hover {
+    background-color: #dddddd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    min-height: 100%;
+    background: #454B58;
+}
+
+.Background {
+    width: 100%;
+    background: #E4E6E7;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: none;
+}
+
+
+nav {
+    width: 100%;
+}
+
+
+.NavBar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.NavBar li a {
+    width: 100%;
+    padding: 18px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    background-color: #454B58;
+    font-style: none;
+}
+
+
+
+.NavBar li{
+    list-style: none;
+    
+}
+
+.NavBar > li:nth-child(5) > a {
+    text-decoration: underline;
+    font-size: large;
+}
+
+
+
+
+
+
+
+
+
+
+
+form {
+    width: 95%;              
+    margin: 5vh auto;   
+    padding: 20px;          
+    background-color: #454B58;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: white;
+
+}
+
+form h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+form label {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form input[type="radio"] {
+    margin-right: 8px;
+}
+
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+form textarea:focus {
+    outline: 2px solid #ffffff;
+}
+
+form button {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    color: #454B58;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+form button:hover {
+    background-color: #dddddd;
+    transform: translateY(-2px);
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

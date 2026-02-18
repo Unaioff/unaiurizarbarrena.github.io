@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background: #454B58;
+}
+
+
+.Background {
+    width: 90%;
+    min-height: 100vh;
+    background: #E4E6E7;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 
+        -5px 0 55px #1d2025, 
+        5px 0 25px #1d2025;
+}
+
+
+@media (min-width: 601px) {
+
+
+/* ================[ NAVBAR REAL ]================
+
+
+
+.NavBar {
+    padding-top: 5vh;
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    justify-content: center;
+    gap: 3vh;
+    
+}
+
+.NavBar > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 2.2vh; 
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.NavBar > a:nth-child(2){
+    font-size: 3vh;
+    text-decoration: underline;
+}
+
+
+.NavBar >a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+
+}
+
+.NavBar > a:nth-child(4):hover { transform: rotateZ(7deg); }
+.NavBar > a:nth-child(5):hover { transform: rotateZ(15deg); }
+.NavBar > a:nth-child(1):hover { transform: rotateZ(-15deg); }
+.NavBar > a:nth-child(2):hover { transform: rotateZ(-7deg); }
+
+
+
+
+@media (max-width: 600px) {
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    min-height: 100%;
+    background: #454B58;
+}
+
+.Background {
+    width: 100%;
+    background: #E4E6E7;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: none;
+}
+
+.NavBar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.NavBar > a {
+    width: 100%;
+    padding: 18px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    background-color: #454B58;
+}
+
+.NavBar > a:nth-child(1){
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.Title {
+    margin-top: 4vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+*/
+/*================[ INICIO DEL NAVBAR ]================*/
+
+.NavBar {
+    padding-top: 5vh;
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    justify-content: center;
+    gap: 3vh;
+}
+
+.NavBar > li > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 2.2vh; 
+}
+
+.NavBar > li:nth-child(4) > a {
+    font-size: 3vh;
+    text-decoration: underline;
+}
+
+.NavBar > li {
+    list-style-type: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+
+}
+
+.NavBar > li:hover {
+    box-shadow: 0 12px 5px rgba(0, 0, 0, 0.22);
+    transform: translateY(-4px);
+}
+
+
+.SubMenu {
+    position: absolute;
+    left: -25%;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    min-width: 200px;
+    padding: 10px 0;
+    background-color: #ffffff;
+    border-radius: 15px;
+    z-index: 10;
+    visibility: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.SubMenu > li {
+    list-style: none;
+}
+
+.SubMenu > li > a {
+    padding: 8px 15px;
+    color: black;
+    text-decoration: none;
+    display: flex;
+}
+
+.SubMenu > li > a:hover {
+    background-color: #f3f3f3;
+}
+
+.NavBar > li:hover .SubMenu {
+    visibility: visible;
+}
+
+/*================[ Fin DEL NAVBAR ]================*/
+
+
+
+.Main {
+    margin-top: 5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+
+.Section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 60%; 
+    margin-top: 50px;
+    background-color: #454B58;
+    padding: 5vh;
+
+    background: #f2f2f2;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
+    
+}
+
+
+
+.Section:nth-child(2n+1) {
+    align-self: flex-start;
+}
+
+.Section:nth-child(2n) {
+    align-self: flex-end;
+}
+
+.Title {
+    padding: 5px;
+}
+
+
+.Content {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.Content img {
+    width: 50%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+.Content p {
+    padding: 10px;
+    width: 50%;
+}
+
+.Exp:nth-child(2n) .Content {
+    flex-direction: row-reverse;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    min-height: 100%;
+    background: #454B58;
+}
+
+.Background {
+    width: 100%;
+    background: #E4E6E7;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: none;
+}
+
+
+nav {
+    width: 100%;
+}
+
+
+.NavBar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.NavBar li a {
+    width: 100%;
+    padding: 18px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    background-color: #454B58;
+    font-style: none;
+}
+
+
+
+.NavBar li{
+    list-style: none;
+    
+}
+
+.NavBar > li:nth-child(4) > a {
+    text-decoration: underline;
+    font-size: large;
+}
+
+
+
+
+.Main {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.Section {
+    width: 100%;
+    background: #f2f2f2;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+.Content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Content img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.Content p {
+    width: 100%;
+    padding: 5px;
+    font-size: 15px;
+}
+
+
+
+
+
+}
+
